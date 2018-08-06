@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <title>Pupper Predict</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class = " navbar navbar-inverse " >
+      <div class = " container-fluid " >
+        <div class = " navbar-header " >
+          <button type = " button "  class = " navbar-toggle "  data-toggle = " collapse "  data-target = " #myNavbar " >
+            <span class = " icon-bar " > </span >
+            <span class = " icon-bar " > </span >
+            <span class = " icon-bar " > </span >
+          </button >
+          <A class = "navbar-brand" href = "#">Pupper Predictor</a>
+        </div >
+        <div  class = " collapse navbar-collapse "  id = " myNavbar " >
+          <ul  class = " nav navbar-nav " >
+          </ul >
+        </div >
+        </div>
+      </nav>
+      <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Pupper Predict</h3>
+          </div>
+          <div class="box-body"style="height:60px;">
+            <div class="form-group">
+              <textarea id='age_input' placeholder='Age'></textarea>
+              <textarea id='days_input'placeholder='Days in Shelter'></textarea>
+              <textarea id='health_input'placeholder='Good Health?'></textarea>
+            </div>
+          </div>
+      </div>
+      <div>
+        <p>Euthanize Danger Present?<div id="output"></div></p>
+      </div>
+        <button id='do_model_input' onclick='updateScore()',class="button primary radius">Calculate</button>
+  <div class="text">
+      The probability of the dog being euthanized is
+  </div>
+    <p><div id="probs"></div></p>
+    <script type='text/javascript' src="../static/js/do_model_input.js"></script>
+  </body>
+</html>
